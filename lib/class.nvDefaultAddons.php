@@ -7,10 +7,24 @@
     {
         $oAddon = rex_addon::get(self::$addon);
         $aAddons = array();
+        $aTmp = array();
         $sFile = $oAddon->getDataPath('settings.json');
+        $aAllAddons = rex_install_packages::getAddPackages();
         if (file_exists($sFile)) {
             $sContent = file_get_contents($sFile);
-            $aAddons = (json_decode($sContent, true));
+            $aTmp = (json_decode($sContent, true));
+        }
+        foreach ($aTmp as $sKey => $sVersion) {
+            if ($sVersion == "") {
+                $aAddon = $aAllAddons[$sKey];
+                $aVersions = $aAddon["files"];
+                foreach ($aVersions as $iFileId => $aVersion) {
+                    if (!$sVersion) {
+                        $sVersion = $aVersion["version"];
+                    }
+                }
+            }
+            $aAddons[$sKey] = $sVersion;
         }
         return $aAddons;
     }
