@@ -10,13 +10,13 @@ Redaxo 5 Addon zum Installieren von häufig benötigten Addons
 ## Konfiguration
 
 Im Datei settings.json im Addon-Ordner unter redaxo/data/addons/nv_defaultaddons/ bearbeiten
-Es muss immer der Key des Addons sowie die gewünschte Version angegeben werden
+Es muss immer mindestens der Key des Addons sowie optional die gewünschte Version angegeben werden. Wenn keine Version angegeben wird, wird immer die aktuellste installiert
 
 ## Beispiel settings.json
 
 ```php
 {
 	"yrewrite": "2.6",
-    "cronjob": "2.1.0"
+    "cronjob": ""
 }
 ```
