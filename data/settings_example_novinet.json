@@ -1,0 +1,15 @@
+{
+    "yform": "3.4",
+    "yrewrite": "2.6",
+    "cronjob": "2.1.0",
+    "emailobfuscator": "3.0.0",
+    "mform": "5.3.1",
+    "mblock": "3.1.0",
+    "usage_check": "2.3",
+    "developer": "3.9.0",
+    "theme": "1.1.1",
+    "be_tools": "1.5.1",
+    "nv_domainsettings": "1.1.0",
+    "nv_betheme": "1.1.3",
+    "nv_modulesettings": "1.2"
+}

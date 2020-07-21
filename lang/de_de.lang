@@ -1,0 +1,33 @@
+nv_defaultaddons_title = nvDefaultAddons
+nv_defaultaddons_info = Info/Hilfe
+
+nv_defaultaddons_install = Installation
+nv_defaultaddons_install_heading = Installation
+nv_defaultaddons_install_description = Bei der Installation werden gewünschte Standardaddons installiert
+nv_defaultaddons_install_button = Standardaddons installieren
+
+nv_defaultaddons_confirm_setup = Fortfahren?
+
+nv_defaultaddons_error_no_addons = Es wurden keine Standardaddons definiert. Die Standardaddons können in der Datei <b>/redaxo/data/addons/nv_defaultaddons/settings.json</b> definiert werden.
+
+nv_defaultaddons_addon_already_downloaded = Addons <b>"{0}"</b> wurde bereits heruntergeladen
+nv_defaultaddons_addon_already_installed = Addons <b>"{0}"</b> wurde bereits installiert
+nv_defaultaddons_addon_already_activated = Addons <b>"{0}"</b> wurde bereits aktiviert
+
+nv_defaultaddons_addon_downloaded = Addons <b>"{0}"</b> wurde erfolgreich heruntergeladen
+nv_defaultaddons_addon_found = Addons <b>"{0}"</b> wurde erfolgreich im Ordner gefunden
+nv_defaultaddons_addon_installed = Addons <b>"{0}"</b> wurde erfolgreich installiert
+nv_defaultaddons_addon_activated = Addons <b>"{0}"</b> wurde erfolgreich aktiviert
+
+nv_defaultaddons_addon_not_available      = Benötigte Version des Addons <b>"{0}"</b> ist nicht verfügbar!
+nv_defaultaddons_addon_not_exists         = Addons <b>"{0}"</b> ist nicht vorhanden!
+nv_defaultaddons_addon_exists = Das Addon <b>"{0}"</b> wurde bereits heruntergeladen!
+nv_defaultaddons_addon_failed_to_download = Fehler beim Download des Addons <b>"{0}"</b>!
+nv_defaultaddons_addon_failed_to_validate = Fehler bei der Validierung des Addons <b>"{0}"</b>!
+nv_defaultaddons_addon_failed_to_extract  = Fehler beim Entpacken des Addons <b>"{0}"</b>!
+nv_defaultaddons_addon_failed_to_install  = Fehler beim Installieren des Addons <b>"{0}"</b>!
+nv_defaultaddons_addon_failed_to_activate = Fehler beim Aktivieren des Addons <b>"{0}"</b>!
+nv_defaultaddons_addon_failed_to_import   = Fehler beim Importieren des Addons <b>"{0}"</b>!
+
+nv_defaultaddons_installation_error         = nvDefaultAddons konnte die gewünschten Addons nicht (alle) installieren
+nv_defaultaddons_installation_success       = nvDefaultAddons hat erfolgreich Addons installiert
