@@ -1,0 +1,15 @@
+a .novinet-icon-logo {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: -25px;
+    background: url(../images/novinet-signet.svg) no-repeat 0 0;
+    filter: grayscale(100%);
+    background-size: 18px 18px;
+    vertical-align: middle;
+}
+
+.rex-has-icon.active a .novinet-icon-logo,
+a:hover .novinet-icon-logo {
+    filter: grayscale(100%) brightness(300%);
+}

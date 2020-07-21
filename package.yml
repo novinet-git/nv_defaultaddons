@@ -1,9 +1,10 @@
 package: nv_defaultaddons
-version: 1.0.0
+version: 1.0.1
 author: 'novinet GmbH & Co. KG'
 supportpage: 'https://github.com/novinet-git/nv_defaultaddons'
 page:
     title: nvDefaultAddons
+    icon: novinet-icon-logo
     perm: 'nv_defaultaddons[]'
     pjax: true
     subpages:
