@@ -25,5 +25,6 @@
     "maintenance": "",
     "minibar": "",
     "uploader": "",
-    "nv_rexhelper": ""
+    "nv_rexhelper": "",
+    "navbuilder":""
 }

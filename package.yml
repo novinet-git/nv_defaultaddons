@@ -1,5 +1,5 @@
 package: nv_defaultaddons
-version: 1.1.0
+version: 1.2.0
 author: 'novinet GmbH & Co. KG'
 supportpage: 'https://github.com/novinet-git/nv_defaultaddons'
 page:
@@ -8,11 +8,9 @@ page:
     perm: 'nv_defaultaddons[]'
     pjax: true
     subpages:
+        settings: { title: translate:settings }
         install: { title: 'translate:install' }
         info: { title: translate:info }
 requires:
-    packages:
-        backup: ^2.3.0
-        structure/content: ^2.7.0
     redaxo: ^5.9.0
 

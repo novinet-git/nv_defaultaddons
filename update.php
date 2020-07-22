@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 if (!$this->hasConfig("addonlist")) {
     $aAddons = array();

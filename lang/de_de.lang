@@ -1,5 +1,7 @@
 nv_defaultaddons_title = nvDefaultAddons
 nv_defaultaddons_info = Info/Hilfe
+nv_defaultaddons_settings = Konfiguration
+nv_defaultaddons_addonlist = Standardaddons
 
 nv_defaultaddons_install = Installation
 nv_defaultaddons_install_heading = Installation
@@ -8,7 +10,7 @@ nv_defaultaddons_install_button = Standardaddons installieren
 
 nv_defaultaddons_confirm_setup = Fortfahren?
 
-nv_defaultaddons_error_no_addons = Es wurden keine Standardaddons definiert. Die Standardaddons können in der Datei <b>/redaxo/data/addons/nv_defaultaddons/settings.json</b> definiert werden.
+nv_defaultaddons_error_no_addons = Es wurden keine Standardaddons definiert.
 
 nv_defaultaddons_addon_already_downloaded = Addons <b>"{0}"</b> wurde bereits heruntergeladen
 nv_defaultaddons_addon_already_installed = Addons <b>"{0}"</b> wurde bereits installiert

@@ -3,17 +3,24 @@
 
     public static $addon = 'nv_defaultaddons';
 
+    public function __construct()
+    {
+        $this->addon = rex_addon::get(self::$addon);
+    }
+
+
     public function getProjectAddons()
     {
         $oAddon = rex_addon::get(self::$addon);
         $aAddons = array();
         $aTmp = array();
-        $sFile = $oAddon->getDataPath('settings.json');
+        $sFile = $oAddon->getPath('lib/settings.json');
         $aAllAddons = rex_install_packages::getAddPackages();
         if (file_exists($sFile)) {
             $sContent = file_get_contents($sFile);
             $aTmp = (json_decode($sContent, true));
         }
+        $aTmp = json_decode($oAddon->getConfig("addonlist"),true);
         foreach ($aTmp as $sKey => $sVersion) {
             if ($sVersion == "") {
                 $aAddon = $aAllAddons[$sKey];
@@ -29,7 +36,7 @@
         return $aAddons;
     }
 
-    public static function install($aAddons = array())
+    public static function installAddons($aAddons = array())
     {
         $oAddon = rex_addon::get(self::$addon);
         $aError = array();

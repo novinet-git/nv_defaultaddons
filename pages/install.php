@@ -4,7 +4,7 @@ $aAddons = nvDefaultAddons::getProjectAddons();
 
 if (rex_post('install', 'boolean')) {
 
-    $aResult = nvDefaultAddons::install($aAddons);
+    $aResult = nvDefaultAddons::installAddons($aAddons);
     $aError = $aResult["error"];
     $aSuccess = $aResult["success"];
 
@@ -30,9 +30,9 @@ $content .= '<p><b>Folgende Addons sollen installiert werden:</b></p><ul>';
 $errors = array();
 
 foreach ($aAddons as $sPackage => $sVersion) {
-    $package = rex_package::get($sPackage);
+    $oPackage = rex_package::get($sPackage);
     $content .= '<li>' . $sPackage . ' (' . $sVersion . ')';
-    if ($package->isAvailable()) {
+    if ($oPackage->isAvailable()) {
         $content .= ' - bereits aktiv';
     }
     $content .= '</li>';
