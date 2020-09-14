@@ -23,6 +23,10 @@
         $aTmp = json_decode($oAddon->getConfig("addonlist"),true);
         foreach ($aTmp as $sKey => $sVersion) {
             if ($sVersion == "") {
+                if (!isset($aAllAddons[$sKey])) {
+                    echo rex_view::error('Addon '.$sKey.' ist nicht vorhanden.');
+                    continue;
+                }                
                 $aAddon = $aAllAddons[$sKey];
                 $aVersions = $aAddon["files"];
                 foreach ($aVersions as $iFileId => $aVersion) {
