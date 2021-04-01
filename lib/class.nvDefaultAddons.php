@@ -1,17 +1,17 @@
 <?php class nvDefaultAddons
 {
 
-    public static $addon = 'nv_defaultaddons';
+    public static $addon_name = 'nv_defaultaddons';
 
     public function __construct()
     {
-        $this->addon = rex_addon::get(self::$addon);
+        $this->addon = rex_addon::get(self::$addon_name);
     }
 
 
     public function getProjectAddons()
     {
-        $oAddon = rex_addon::get(self::$addon);
+        $oAddon = rex_addon::get(self::$addon_name);
         $aAddons = array();
         $aTmp = array();
         $sFile = $oAddon->getPath('lib/settings.json');
@@ -21,8 +21,13 @@
             $aTmp = (json_decode($sContent, true));
         }
         $aTmp = json_decode($oAddon->getConfig("addonlist"),true);
+
         foreach ($aTmp as $sKey => $sVersion) {
             if ($sVersion == "") {
+                if (!isset($aAllAddons[$sKey])) {
+                    echo rex_view::error('Addon '.$sKey.' ist nicht vorhanden.');
+                    continue;
+                }
                 $aAddon = $aAllAddons[$sKey];
                 $aVersions = $aAddon["files"];
                 foreach ($aVersions as $iFileId => $aVersion) {
@@ -38,7 +43,7 @@
 
     public static function installAddons($aAddons = array())
     {
-        $oAddon = rex_addon::get(self::$addon);
+        $oAddon = rex_addon::get(self::$addon_name);
         $aError = array();
         $aSuccess = array();
         foreach ($aAddons as $sPackage => $sVersion) {
@@ -107,7 +112,7 @@
 
     public static function install2()
     {
-        $addon = rex_addon::get('nv_defaultaddons');
+        $addon = rex_addon::get(self::$addon_name);
 
         // in some cases rex_addon has the old package.yml in cache. But we need our new merged package.yml
         $addon->loadProperties();
