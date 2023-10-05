@@ -9,7 +9,7 @@
     }
 
 
-    public function getProjectAddons()
+    public static function getProjectAddons()
     {
         $oAddon = rex_addon::get(self::$addon_name);
         $aAddons = array();
@@ -105,8 +105,8 @@
             }
         }
         return $aResult = array(
-            error => $aError,
-            success => $aSuccess,
+            "error" => $aError,
+            "success" => $aSuccess,
         );
     }
 
